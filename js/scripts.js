@@ -75,3 +75,64 @@ $("#player").on("click", function () {
 $("#food").on("click", function () {
   location.replace("https://drive.google.com/file/d/1qiwD8dinwF5DL1gYgtoUAtokTHXfqIzi/view?usp=sharing")
 })
+
+
+
+function send(e) {
+
+  e.preventDefault();
+  var name = $("#name").val();
+  var email = $("#email").val()
+  var number = $("#phone").val()
+  var message = $("#message").val()
+
+
+  var data = {
+    service_id: "gmail",
+    template_id: "template_f6wqJaPx",
+    user_id: "user_0crLO2gJ3psVgf8pHtZe2",
+    template_params: {
+      from_name: name,
+      from_email: email,
+      phoneNumber: number,
+      message_html: message,
+    },
+  };
+
+
+  $.ajax("https://api.emailjs.com/api/v1.0/email/send", {
+    type: "POST",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+  })
+    .done(function () {
+      swal
+        .fire({
+          icon: "success",
+          title: "Received",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+    })
+    .fail(function (error) {
+      console.log("err: ", error)
+      swal.fire({
+        icon: "error",
+        title: "Oops!!",
+        text: "something went wrong, please try again.",
+        timer: 3000,
+        showConfirmButton: false,
+      });
+    });
+
+
+  /// reset
+  $("#name").val("");
+  $("#email").val("")
+  $("#phone").val("")
+  $("#message").val("")
+
+  // emailjs.sendForm('contact_service', 'contact_form', this);
+}
+
+
