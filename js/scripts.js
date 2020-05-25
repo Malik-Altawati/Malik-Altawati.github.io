@@ -73,5 +73,5 @@ $("#player").on("click", function () {
 })
 
 $("#food").on("click", function () {
-  location.replace("https://drive.google.com/file/d/1Cm6iX0LsB8sVLOpyWjJGAR13BBJ6v7dL/view?usp=sharing")
+  location.replace("https://drive.google.com/file/d/1qiwD8dinwF5DL1gYgtoUAtokTHXfqIzi/view?usp=sharing")
 })
