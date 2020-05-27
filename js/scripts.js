@@ -138,3 +138,7 @@ function send(e) {
 
 // var audio = new Audio("../assets/6ix9ine-gooba.mp3");
 // audio.play();
+
+$(window).on("load", function () {
+  $(".loader-wrapper").fadeOut("slow");
+});
