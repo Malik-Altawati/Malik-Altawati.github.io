@@ -27,7 +27,7 @@
         <!-- you can set whatever style you want on this -->
         Loading, please wait...
     </div>
-    <div id="body" style="display:none;">
+    <div id="body" style="visibility:hidden;">
         <!-- everything else -->
         <div id="fb-root"></div>
         Your Chat Plugin code
@@ -378,8 +378,8 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             // code...
-            document.getElementById("body").style.display = block;
-            document.getElementById("msg").style.display = none
+            document.getElementById("body").style.visibility = visible;
+            document.getElementById("msg").style.visibility = hidden;
 
         });
     </script>
