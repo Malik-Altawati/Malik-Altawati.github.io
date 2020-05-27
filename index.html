@@ -19,7 +19,15 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <style>
+        .body {
+            display: none;
+        }
 
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -27,7 +35,7 @@
         <!-- you can set whatever style you want on this -->
         Loading, please wait...
     </div>
-    <div id="body" style="display:none;">
+    <div class="body">
         <!-- everything else -->
         <div id="fb-root"></div>
         Your Chat Plugin code
@@ -375,9 +383,13 @@
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('body').show();
-            $('#msg').hide();
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // code...
+            document.getElementsByTagName("body").classList.remove('body');
+            document.getElementById("msg").classList.add("hide")
+
         });
     </script>
     <!-- Load Facebook SDK for JavaScript -->
