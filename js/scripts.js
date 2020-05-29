@@ -138,10 +138,15 @@ function send(e) {
 
 // var audio = new Audio("../assets/6ix9ine-gooba.mp3");
 // audio.play();
-$("body").hide()
-$(window).on("load", function () {
-  $("body").show()
+// $("body").hide()
+// $(window).on("load", function () {
+//   $("body").show()
 
-  $(".loader-wrapper").fadeOut("slow");
+//   $(".loader-wrapper").fadeOut("slow");
 
-});
+// });
+
+window.onload = function () {
+  //hide the preloader
+  document.querySelector(".loader-wrapper").style.display = "none";
+}
