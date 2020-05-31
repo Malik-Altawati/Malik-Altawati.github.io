@@ -76,6 +76,10 @@ $("#food").on("click", function () {
   location.replace("https://drive.google.com/file/d/1qiwD8dinwF5DL1gYgtoUAtokTHXfqIzi/view?usp=sharing")
 })
 
+$("#contacts").on("click", function () {
+  location.replace("https://drive.google.com/file/d/1IKnZ0dYuxLGM6o1BXjn6578RdrP3kEyN/view?usp=sharing")
+})
+
 
 
 function send(e) {
